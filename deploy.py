@@ -61,7 +61,7 @@ if botao:
     dicionario.update(x_numericos)
     dicionario.update(x_tf)
     valores_x = pd.DataFrame(dicionario, index=[0])
-    modelo = joblib.load('/content/drive/MyDrive/Hashtag-Python/Projeto 3 - Ciência de Dados - Aplicação de Mercado de Trabalho/Executar/modelo_v3_compressed.joblib')
+    modelo = joblib.load('modelo_v3_compressed.joblib')
     preco = modelo.predict(valores_x)
     st.write(preco[0])
 
