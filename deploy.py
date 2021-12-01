@@ -61,8 +61,6 @@ if botao:
     dicionario.update(x_numericos)
     dicionario.update(x_tf)
     valores_x = pd.DataFrame(dicionario, index=[0])
-    #modelo = joblib.load('modelo_v3_compressed.joblib')
-    modelo = joblib.load(r'https://github.com/Gebrel07/Projeto-Airnbnb/blob/main/modelo_v3_compressed.joblib')
+    modelo = joblib.load("modelo_v3_compressed.joblib")
     preco = modelo.predict(valores_x)
     st.write(preco[0])
-
